@@ -150,6 +150,7 @@ main {
     border: 1px solid red;
     flex-direction: column;
 
+    display: none;
     height: 100vh;
     left: 10000px; /*Taking the content out of view*/
     top: 0;
