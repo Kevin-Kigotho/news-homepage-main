@@ -145,14 +145,14 @@ main {
 }
 
 .navbar .navbar__links .links{
-    /* display: none; */
+    display: none;
     position: absolute;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     flex-direction: column;
 
-    display: none;
-    height: 100vh;
-    left: 10000px; /*Taking the content out of view*/
+    
+    /* height: 100vh; */
+    left: 0; /*Taking the content out of view*/
     top: 0;
     /* width: 70%; */
     z-index: 2;
@@ -195,7 +195,7 @@ main {
 
 /* Hero News */
 .hero__news {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 1.5rem 1rem;
     background-color: var(--ntrl-very-dark-blue);
 }
