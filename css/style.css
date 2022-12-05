@@ -86,7 +86,8 @@ body {
     color: var(--ntrl-dark-grayish-blue);
     position: relative;
     font-size: 0.9375rem;
-   
+    display: grid;
+    place-content: center;
 }
 
 button {
@@ -263,6 +264,27 @@ main {
     font-size: 1rem;
     font-weight: 700;
     color: var(--ntrl-very-dark-blue);
+}
+
+@media (min-width: 500px) {
+    .trending__news {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 700px) {
+    .hero {
+        grid-template-columns: 2fr 1fr;
+        border: 1px solid red;
+    }
+
+    .hero .hero__cta-text {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .trending__news {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 
