@@ -125,7 +125,6 @@ p {
 /* Main */
 
 main {
-    width: 90%;
     max-width: 1100px;
     /* margin: 0 auto; */
     display: grid;
