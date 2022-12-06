@@ -121,6 +121,7 @@ p {
     border: none;
     padding: .8rem 1.5rem;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 /* Main */
@@ -164,7 +165,7 @@ main {
 /* Hero Section */
 .hero {
     display: grid;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 
@@ -191,6 +192,17 @@ main {
     color: var(--ntrl-off-white);
     background-color: var(--pri-soft-red);
     margin: 1rem 0;
+    transition: background-color .3s ease;
+}
+
+.cta__text-content .cta-btn:active {
+    background-color: var(--ntrl-very-dark-blue);
+}
+
+@media (hover: hover) {
+  .cta__text-content .cta-btn:hover {
+    background-color: var(--ntrl-very-dark-blue) /* solves sticky problem */
+  }
 }
 
 /* Hero News */
@@ -280,6 +292,12 @@ main {
 
     .hero .hero__cta-text {
         grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 1.8rem;
+    }
+
+    .hero .hero__cta-text .main-heading h1 {
+        font-size: 3rem;
     }
 
     .trending__news {
