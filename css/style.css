@@ -124,6 +124,22 @@ p {
     cursor: pointer;
 }
 
+.burger {
+    border: 0;
+    padding: 0;
+    z-index: 3;
+    right: 0;
+    display: grid;
+    place-items: center;
+    width: 70px;
+    height: 70px;
+    background-image: url(../assets/images/icon-menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+}
+
+
 /* Main */
 
 main {
@@ -136,6 +152,11 @@ main {
     margin: 1rem;
 }
 
+main.open .burger {
+    background-image: url(../assets/images/icon-menu-close.svg);
+}
+
+
 /* Navigation */
 .navbar {
     padding: 1.5rem 0 0;
@@ -146,23 +167,61 @@ main {
     width: 50px;
 }
 
+.links {
+    position: fixed;
+    top: 0;
+    width: 0;
+}
+
 .navbar .navbar__links .links {
-    display: none;
-    position: absolute;
-    /* border: 1px solid red; */
-    flex-direction: column;
+    /* display: none;
+    position: absolute; */
+    border: 1px solid red;
+    /* flex-direction: column;
     gap: 1.5rem;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     
     /* height: 100vh; */
-    left: 0; /*Taking the content out of view*/
-    top: 0;
+    /* left: 0; /*Taking the content out of view*/
+    /* top: 0; */ 
     /* width: 70%; */
+    position: fixed;
+    top: 0;
+    /* width: 100%; */
     z-index: 2;
+    height: 100%;
+    right: -9999px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* padding-left: 50px; */
     background-color: #fff;
-   
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: .3s;
 }
+
+main.open .navbar .navbar__links  .burger {
+    background-image: url(../assets/images/icon-menu-close.svg);
+    background-repeat: no-repeat;
+}
+
+main.open .links {
+        opacity: 1;
+        visibility: visible;
+        right: 0;
+        padding: 50px;
+        width: 70vw;
+        background-color: #fff;
+        color: #000;
+    }
+
 
 .navbar .navbar__links .links li a {
     transition: color .3s ease;
@@ -306,9 +365,11 @@ main {
 
     .navbar .navbar__links .links {
         display: flex;
-        position: relative;
+        position: static;
         flex-direction: row;
         gap: 1.5rem;
+        visibility: visible;
+        opacity: 1;
     }
 
     .navbar .navbar__links .burger {
@@ -340,7 +401,7 @@ main {
 }
 
 @media (hover: hover) {
-    
+
     .cta__text-content .cta-btn:hover {
         background-color: var(--ntrl-very-dark-blue) /* solves sticky problem */
     }
