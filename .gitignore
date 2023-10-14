@@ -5,6 +5,7 @@
 *.sketch
 *.fig
 *.md
+.vscode
 
 # Avoid accidental XD upload if you convert the design file
 ###############################################
