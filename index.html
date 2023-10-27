@@ -24,17 +24,22 @@
           <a href="index.html" class="logo">
             <img src="assets/images/logo.svg" alt="logo" />
           </a>
-          <nav class="navbar">
-            <ul class="navbar_items">
-              <li class="navbar_item"><a href="index.html">Home</a></li>
-              <li class="navbar_item"><a href="#">New</a></li>
-              <li class="navbar_item"><a href="#">Popular</a></li>
-              <li class="navbar_item"><a href="#">Trending</a></li>
-              <li class="navbar_item"><a href="">Categories</a></li>
-            </ul>
-          </nav>
 
-          <img src="assets/images/icon-menu.svg" alt="" class="burger" />
+          <ul class="navbar_items" data-visible="false">
+            <li class="navbar_item"><a href="index.html">Home</a></li>
+            <li class="navbar_item"><a href="#">New</a></li>
+            <li class="navbar_item"><a href="#">Popular</a></li>
+            <li class="navbar_item"><a href="#">Trending</a></li>
+            <li class="navbar_item"><a href="">Categories</a></li>
+          </ul>
+
+          <img
+            aria-controls="navbar_items"
+            aria-expanded="false"
+            src="assets/images/icon-menu.svg"
+            alt="burger menu"
+            class="burger"
+          />
         </header>
 
         <!-- Hero Section Start -->
